@@ -1,59 +1,178 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# To-Do List (Vazifalar ro'yxati) - Texnik Topshiriq
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 1. LOYIHA HAQIDA UMUMIY MA'LUMOT
 
-## About Laravel
+**Loyiha nomi:** To-Do List (Vazifalar ro'yxati)  
+**Maqsad:** Shaxsiy foydalanish uchun kundalik vazifalarni boshqarish tizimi  
+**Platforma:** Web ilovasi (Desktop va mobil moslashuvchan)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 2. ASOSIY FUNKSIYALAR
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 2.1 Vazifalar bilan ishlash
+- Yangi vazifa qo'shish (sarlavha, tavsif, muddat)
+- Vazifani tahrirlash
+- Vazifani o'chirish
+- Vazifani bajarilgan deb belgilash
+- Vazifalarni tartiblash (sana, muhimlik, alfabit bo'yicha)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 2.2 Kategoriyalar va teglar
+- Vazifalarni kategoriyalarga ajratish (Ish, Shaxsiy, Shopping va h.k.)
+- Rang kodlash tizimi
+- Kategoriyalar yaratish va boshqarish
 
-## Learning Laravel
+### 2.3 Prioritet darajalari
+- Yuqori (High) - qizil
+- O'rta (Medium) - sariq
+- Past (Low) - yashil
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### 2.4 Muddat (Deadline)
+- Sana va vaqt belgilash
+- Eslatma (notification) tizimi
+- Kechikkan vazifalarni ajratib ko'rsatish
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 2.5 Qidiruv va filtrlash
+- Vazifalarni qidirish
+- Holati bo'yicha filtrlash (Barcha, Faol, Bajarilgan)
+- Kategoriya bo'yicha filtrlash
+- Prioritet bo'yicha filtrlash
 
-## Laravel Sponsors
+## 3. TEXNIK TALABLAR
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 3.1 Frontend
+**Tavsiya etiladigan texnologiyalar:**
+- **Variant 1 (Sodda):** HTML, CSS, Vanilla JavaScript
+- **Variant 2 (Zamonaviy):** React.js yoki Vue.js
+- **Styling:** Tailwind CSS yoki Bootstrap
 
-### Premium Partners
+### 3.2 Ma'lumotlar saqlash
+**Variant 1 (Sodda):** LocalStorage - brauzerda saqlash  
+**Variant 2 (Ilg'or):** Backend yaratish
+- Node.js + Express
+- MongoDB yoki PostgreSQL
+- RESTful API
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 3.3 Dizayn talablari
+- Zamonaviy va minimalistik interfeys
+- Responsive dizayn (mobil va desktop)
+- Qorong'u va yorug' rejim (Dark/Light mode)
+- Ikki tillik interfeys: O'zbek va Ingliz
 
-## Contributing
+## 4. INTERFEYS TUZILMASI
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 4.1 Asosiy ekran elementlari
+```
+┌─────────────────────────────────────────┐
+│  Logo    [Yangi vazifa +]   [Qidiruv]  │
+├─────────────────────────────────────────┤
+│ Sidebar:          │ Vazifalar ro'yxati │
+│ - Bugun           │ ┌──────────────────┐│
+│ - Haftada         │ │ □ Vazifa 1       ││
+│ - Barcha          │ │   [Edit] [Del]   ││
+│ - Kategoriyalar   │ ├──────────────────┤│
+│                   │ │ □ Vazifa 2       ││
+│                   │ │   [Edit] [Del]   ││
+│                   │ └──────────────────┘│
+└─────────────────────────────────────────┘
+```
 
-## Code of Conduct
+### 4.2 Vazifa kartasi ko'rinishi
+- Checkbox (bajarilganligini belgilash)
+- Sarlavha (bold)
+- Tavsif (kichikroq shrift)
+- Kategoriya belgisi (rangli tag)
+- Muddat (agar mavjud bo'lsa)
+- Prioritet indikatori
+- Tahrirlash va o'chirish tugmalari
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 5. FOYDALANUVCHI OQIMI (User Flow)
 
-## Security Vulnerabilities
+1. Foydalanuvchi ilovaga kiradi
+2. Mavjud vazifalar ro'yxatini ko'radi
+3. "+" tugmasini bosib yangi vazifa qo'shadi
+4. Modal oyna ochiladi (sarlavha, tavsif, kategoriya, prioritet, muddat)
+5. "Saqlash" tugmasini bosadi
+6. Yangi vazifa ro'yxatda paydo bo'ladi
+7. Vazifa checkbox orqali bajarilgan deb belgilanadi
+8. Bajarilgan vazifalar chiziqcha bilan ko'rsatiladi yoki alohida bo'limga o'tadi
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 6. RIVOJLANTIRISH BOSQICHLARI
 
-## License
+### Bosqich 1: MVP (Minimal Viable Product) - 1 hafta
+- Asosiy CRUD operatsiyalari
+- LocalStorage bilan saqlash
+- Oddiy dizayn
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Bosqich 2: Funksionallikni kengaytirish - 1 hafta
+- Kategoriyalar
+- Prioritetlar
+- Muddat va eslatmalar
+- Qidiruv va filtrlash
+
+### Bosqich 3: Yaxshilash - 1 hafta
+- Dark mode
+- Ikki tillik
+- Animatsiyalar
+- Responsive dizayn
+
+### Bosqich 4: Qo'shimcha xususiyatlar (ixtiyoriy)
+- Backend integratsiyasi
+- Foydalanuvchi autentifikatsiyasi
+- Cloud sync
+- Mobil ilova versiyasi
+
+## 7. TEXNIK ARXITEKTURA (LocalStorage versiyasi)
+
+### 7.1 Ma'lumotlar strukturasi
+```javascript
+{
+  id: "unique-id",
+  title: "Vazifa nomi",
+  description: "Batafsil tavsif",
+  category: "Ish",
+  priority: "high",
+  deadline: "2026-02-05T10:00:00",
+  completed: false,
+  createdAt: "2026-02-01T14:30:00"
+}
+```
+
+### 7.2 Asosiy funksiyalar
+- `addTask()` - vazifa qo'shish
+- `editTask(id)` - vazifa tahrirlash
+- `deleteTask(id)` - vazifa o'chirish
+- `toggleComplete(id)` - holatni o'zgartirish
+- `filterTasks(criteria)` - filtrlash
+- `searchTasks(query)` - qidiruv
+
+## 8. XAVFSIZLIK VA SAMARADORLIK
+
+- Input validatsiya
+- XSS himoyasi
+- LocalStorage limitlarini nazorat qilish
+- Kod optimizatsiyasi
+- Lazy loading (katta ro'yxatlar uchun)
+
+## 9. TEST QILISH
+
+- Barcha funksiyalarni manual test qilish
+- Turli brauzerlarda test (Chrome, Firefox, Safari)
+- Mobil qurilmalarda test
+- LocalStorage to'lishi holatini test qilish
+
+## 10. DEPLOY
+
+**Bepul hosting variantlari:**
+- GitHub Pages
+- Netlify
+- Vercel
+- Firebase Hosting
+
+---
+
+**Qo'shimcha tavsiyalar:**
+- Birinchi navbatda sodda versiyani tugatib, keyin funksionallikni kengaytiring
+- Har bir funksiyani alohida commit qiling (Git version control)
+- Kodingizni izohlar bilan yozing
+- UI/UX dizaynga e'tibor bering
+
+Ushbu texnik topshiriq asosida loyihani bosqichma-bosqich amalga oshirishingiz mumkin. Qaysi texnologiyalar to'plamidan foydalanmoqchisiz?
